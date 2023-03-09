@@ -33,19 +33,22 @@ public class Main {
     public static void getNotebookModel() {
         System.out.println("Введите минимальный объем оперативной памяти: ");
         Scanner scan = new Scanner(System.in);
-        int memory = scan.nextInt();
-        scan.close();
+        int memoryValue = scan.nextInt();
 
-        LinkedList<String> list = new LinkedList<>();
-        for (Notebook notebook : notebooks) {
-            if(notebook.getMemory() >= memory) {
-                list.add(notebook.getModel());
-            }
+        ArrayList<String> list = new ArrayList<>();
+        for (int i = 0; i < list.size(); i++) {
+            Notebook curer = null;
+            if(curer.getMemory() >= memoryValue) {
+                list.add(curer.getModel());
         }
-        for (String item : list) {
-            System.out.println(item);
+//        for (Notebook notebook : notebooks) {
+//            if(notebook.getMemory() >= memoryValue) {
+//                list.add(notebook.getModel());
+//            }
+            System.out.println(list);
+
         }
-    }
+        }
 
     public static void initData() {
         notebooks.add(new Notebook("1", 8, 256, "Windows", "Black"));
