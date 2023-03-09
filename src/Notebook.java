@@ -1,3 +1,5 @@
+import java.util.Locale;
+
 /*
 Подумать над структурой класса Ноутбук для магазина техники - выделить поля и методы. Реализовать в java.
 Создать множество ноутбуков.
@@ -38,12 +40,10 @@ public class Notebook {
         return hd;
     }
 
-    public String getOs() {
-        return os;
-    }
+    public String getOs() { return os.toLowerCase(Locale.ROOT); }
 
     public String getColor() {
-        return color;
+        return color.toLowerCase();
     }
 
     public void setModel(String model) {
